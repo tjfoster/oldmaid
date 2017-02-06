@@ -1,0 +1,165 @@
+html, body, #om-game { 
+	height: 100%; 
+	padding: 0; 
+	margin: 0; 
+}
+
+body {
+	overflow-y: none;
+	background: #00a651
+}
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: table;
+  transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 300px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header h3 {
+  margin-top: 0;
+  color: #42b983;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  float: right;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+._om-player { 
+	width: 50%; 
+	height: 50%; 
+	float: left; 
+}
+
+._player_name { 
+	font-size: 2em; 
+	font-weight: 500; 
+	padding-bottom: 1em;  
+}
+
+._card { 
+	position: relative;
+	float: left;
+	margin-right: 4px;
+	width: 45px;
+	height: 70px;
+	border-radius: 10px;
+	background: #fff;
+	-webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+	box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+}
+
+._card p {
+  text-align: center;
+  font: 25px/70px Georgia, Times New Roman, serif;
+}
+
+/*div.cardfan { 
+  height: 356px; 
+  width: 700px; 
+  margin: 2rem auto 0;
+  position: relative; 
+}
+div.cardfan span { 
+  position: absolute; 
+  left: 200px; 
+  width: 300px; 
+  height: 200px; 
+  border: 12px solid #ffe; 
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2); 
+  transform-origin: center 400px; 
+  transition: all .6s linear; 
+}
+div.cardfan span:first-child { 
+  transform: rotate(5deg);  
+}
+div.cardfan span:last-child { 
+  transform: rotate(-5deg); 
+}
+div.cardfan:hover span:first-child { 
+  transform: rotate(25deg); 
+}
+div.cardfan:hover span:last-child { 
+  transform: rotate(-25deg);  
+}*/
+
+.suitdiamond:before, .suitdiamond:after {
+  content: "♦";
+  color: #ff0000;
+}
+
+.suitheart:before, .suitheart:after {
+  content: "♥";
+  color: #ff0000;
+}
+
+.suitclub:before, .suitclub:after {
+  content: "♣";
+  color: #000;
+}
+
+.suitspade:before, .suitspade:after {
+  content: "♠";
+  color: #000;
+}
+
+div[class*='suit']:before {
+  position: absolute;
+  font-size: 35px;
+  left: 5px;
+  top: 5px;
+}
+ 
+div[class*='suit']:after {
+  position: absolute;
+  font-size: 35px;
+  right: 5px;
+  bottom: 5px;
+}
